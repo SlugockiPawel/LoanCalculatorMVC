@@ -21,6 +21,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="App">Loan Calculator</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -28,13 +31,13 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" style="min-height:88vh">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted card-footer">
         <div class="container">
             &copy; 2021 - LoanCalculatorMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
