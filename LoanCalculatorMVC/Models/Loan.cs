@@ -7,7 +7,7 @@ namespace LoanCalculatorMVC.Models
 {
     public class Loan
     {
-        public decimal Amount { get; set; }
+        public decimal LoanAmount { get; set; }
         public decimal Rate { get; set; }
         public int Term { get; set; }
         public decimal Payment { get; set; }
