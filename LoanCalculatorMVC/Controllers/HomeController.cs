@@ -23,9 +23,20 @@ namespace LoanCalculatorMVC.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult App()
         {
-            return View();
+            Loan loan = new()
+            {
+                Payment = 0.0m,
+                TotalInterest = 0.0m,
+                TotalCost = 0.0m,
+                Rate = 3.5m,
+                Amount = 15000m,
+                Term = 60,
+            };
+
+            return View(loan);
         }
 
         public IActionResult Privacy()
