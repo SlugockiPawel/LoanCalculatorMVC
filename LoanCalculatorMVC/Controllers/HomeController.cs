@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using LoanCalculatorMVC.Helpers;
 
 namespace LoanCalculatorMVC.Controllers
 {
@@ -37,6 +38,18 @@ namespace LoanCalculatorMVC.Controllers
             };
 
             return View(loan);
+        }
+
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult App(Loan loan)
+        {
+            // Calculate the Loan
+            var loanHelper = new LoanHelper();
+
+            Loan newLoan = loanHelper.GetPayments(loan);
+
+            return View(newLoan);
         }
 
         public IActionResult Privacy()

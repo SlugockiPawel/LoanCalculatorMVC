@@ -13,6 +13,6 @@ namespace LoanCalculatorMVC.Models
         public decimal Payment { get; set; }
         public decimal TotalInterest { get; set; }
         public decimal TotalCost { get; set; }
-        public List<LoanPayment> LoanPayments { get; set; } = new();
+        public List<LoanPayment> Payments { get; set; } = new();
     }
 }
